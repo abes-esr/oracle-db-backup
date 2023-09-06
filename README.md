@@ -51,7 +51,7 @@ And you will have to run (in the same `docker-compose.yml` for example), the bac
 With a such configuration, `/opt/my-backups/` on the hosting server will have everydays at 3h20 a new fresh backup of the `MYAPPLI` oracle schema. Two files will be genrated each days, for example: ``myappli-db-2023-09-06.dmp`` and ``myappli-db-2023-09-06.log``. Older files than 7 days will be automaticaly removed.
 
 
-To manually force backup, you can use this commande:
+To manually force a backup, you can use this command:
 ```bash
 docker exec -it my-oracle-database /scripts/oracle-db-backup.sh
 ```
