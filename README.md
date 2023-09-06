@@ -53,16 +53,16 @@ With a such configuration, `/opt/my-backups/` on the hosting server will have ev
 ## Configuration
 
 These parameters are environements variables you can give when creating the container:
-- ORACLE_DB_DUMPER_HOST: hostname or ip where oracle database server is located
-- ORACLE_DB_DUMPER_PORT: listening port of the oracle database (1521 is default)
-- ORACLE_DB_DUMPER_ORACLE_PWD: password of "system" or "sys" oracle database user (the admin)
-- ORACLE_DB_DUMPER_ORACLE_SCHEMA_TO_BACKUP: name of the oracle schema to backup
-- ORACLE_DB_DUMPER_DUMPNAME_PATTERN: name of the backup filename, it can be a pattern ("db-$(date +'%Y-%m-%d')" by default)
-- ORACLE_DB_BACKUP_CLEANUP_TIME: number of days of backup files to keep ("7" by default - means 7 days)
-- ORACLE_DB_BACKUP_CRON: crontab config when backup should be done ("50 4 * * *" by default)
-- ORACLE_DB_BACKUP_AT_STARTUP: "1" or "0" to backup or not backup when this container starts ("1" by default)
+- `ORACLE_DB_DUMPER_HOST`: hostname or ip where oracle database server is located
+- `ORACLE_DB_DUMPER_PORT`: listening port of the oracle database (`1521` is default)
+- `ORACLE_DB_DUMPER_ORACLE_PWD`: password of "system" or "sys" oracle database user (the admin)
+- `ORACLE_DB_DUMPER_ORACLE_SCHEMA_TO_BACKUP`: name of the oracle schema to backup
+- `ORACLE_DB_DUMPER_DUMPNAME_PATTERN`: name of the backup filename, it can be a pattern (`"db-$(date +'%Y-%m-%d')"` by default)
+- `ORACLE_DB_BACKUP_CLEANUP_TIME`: number of days of backup files to keep (`"7"` by default - means 7 days)
+- `ORACLE_DB_BACKUP_CRON`: crontab config when backup should be done (`"50 4 * * *"` by default)
+- `ORACLE_DB_BACKUP_AT_STARTUP`: "1" or "0" to backup or not backup when this container starts (`"1"` by default)
 
-You also have to share the /backup/ folder with the container where your oracle database is running because when running `expdp` command it is the oracle database that will write the backup files! See "usage" section for an example.
+You also have to share the `/backup/` folder with the container where your oracle database is running because when running `expdp` command it is the oracle database that will write the backup files! See "usage" section for an example.
 
 
 ## Developements
