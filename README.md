@@ -13,7 +13,7 @@ It will periodically run `expdb` to backup an oracle database since the containe
 
 Here is a basic usecase:
 - you have an oracle database running is a container, its name is `my-oracle-database` and it contains a `MYAPPLI` schema
-- you want to backup all the `MYAPPLI` oracle schema in a local folder here or the host server: `/opt/my-backups/`
+- you want to backup each nights all the `MYAPPLI` oracle schema in a local folder here or the host server: `/opt/my-backups/`
 
 You will have to run your oracle database this way (volume is important):
 ```yaml
