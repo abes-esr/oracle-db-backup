@@ -72,3 +72,6 @@ See https://container-registry.oracle.com/ -> Database -> free
 
 If you want to create a new version, use the `create-release.yml` github action and choose a version number starting by oracle database image version.
 For example: ``free-23.2.0.0``
+
+And just increase the last number so that it's easy to know what is the used base image.
+For example a next version would be: ``free-23.2.0.1``
