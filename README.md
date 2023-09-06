@@ -67,8 +67,7 @@ You also have to share the /backup/ folder with the container where your oracle 
 
 ## Developements
 
-The official oracle database image are used to have the `expdp` command.
-
+This image is based on the free oracle image.  
 See https://container-registry.oracle.com/ -> Database -> free 
 
 If you want to create a new version, use the `create-release.yml` github action and choose a version number starting by oracle database image version.
