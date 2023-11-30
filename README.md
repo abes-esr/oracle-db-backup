@@ -31,7 +31,7 @@ You will have to run your oracle database this way (volume is important):
 And you will have to run (in the same `docker-compose.yml` for example), the backup container this way:
 ```yaml
   my-oracle-database-dumper:
-    image: abesesr/oracle-db-backup:free-23.2.0.1
+    image: abesesr/oracle-db-backup:free-23.2.0.2
     container_name: my-oracle-database-dumper
     restart: unless-stopped
     environment:
